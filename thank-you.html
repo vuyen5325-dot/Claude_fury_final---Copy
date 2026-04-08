@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crunchy Fury – Gà Rán Giòn Tan</title>
+    <link rel="icon" type="image/png" href="thucdon/avt.png">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow:wght@400;500;600&family=Bebas+Neue&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" id="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <!-- Thay đường dẫn src bên dưới thành ảnh logo của bạn -->
+                <img src="thucdon/avt.png" alt="Crunchy Fury Logo" style="height: 65px; width: auto;" />
+            </a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link active" data-page="home">Trang chủ</a>
+                <a href="menu.html" class="nav-link" data-page="menu">Menu</a>
+                <a href="khuyen-mai.html" class="nav-link" data-page="khuyen-mai">Khuyến mãi</a>
+                <a href="#about" class="nav-link">Giới thiệu</a>
+                <a href="lien-he.html" class="nav-link" data-page="lien-he">Liên hệ</a>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-btn" title="Tìm kiếm" id="search-toggle"><i class="fas fa-search"></i></button>
+                <button class="icon-btn" title="Yêu thích"><i class="fas fa-heart"></i></button>
+                <button class="icon-btn" title="Tài khoản"><i class="fas fa-user"></i></button>
+                <a href="gio-hang.html" class="icon-btn cart-btn" title="Giỏ hàng">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+        </div>
+        <div class="search-bar" id="search-bar">
+            <input type="text" placeholder="Tìm món ăn..." class="search-input" />
+            <button class="search-submit"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <section class="order-success-page" style="padding: 4rem 1rem; text-align: center; background: var(--dark);">
+        <div class="container" style="max-width: 600px; margin: 0 auto;">
+            <div class="success-icon" style="font-size: 5rem; color: #4ade80; margin-bottom: 1.5rem;">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 style="color: var(--orange); margin-bottom: 1rem; font-family: 'Oswald', sans-serif; font-size: 2rem;">
+                ĐƠN HÀNG CỦA BẠN ĐÃ ĐƯỢC GHI NHẬN!</h2>
+            <p style="color: var(--gray-lt); margin-bottom: 2rem; font-size: 1.1rem;">Mã đơn hàng của bạn là: <strong
+                    id="order-id"
+                    style="color: var(--white); background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 4px;">CF2026-XXXX</strong>
+            </p>
+
+            <div class="order-timeline"
+                style="background: #1f1f1f; padding: 2rem; border-radius: 8px; border: 1px solid #333; margin-bottom: 2.5rem; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <h3
+                    style="color: var(--white); margin-bottom: 1.5rem; font-family: 'Oswald', sans-serif; text-transform: uppercase;">
+                    Tiến trình đơn hàng</h3>
+                <ul style="list-style: none; padding: 0; color: var(--gray-lt); margin: 0;">
+                    <li style="margin-bottom: 1.2rem; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-check-circle" style="color: #4ade80; font-size: 1.2rem;"></i>
+                        <span><strong>Xác nhận đơn:</strong> Đã duyệt lúc <span id="time-now"
+                                style="color: #fff;"></span></span>
+                    </li>
+                    <li style="margin-bottom: 1.2rem; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-fire fa-fade" style="color: var(--orange); font-size: 1.2rem;"></i>
+                        <span><strong>Đang chuẩn bị:</strong> Đầu bếp đang chiên giòn từng miếng gà.</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-motorcycle" style="color: #60a5fa; font-size: 1.2rem;"></i>
+                        <span><strong>Giao hàng:</strong> Dự kiến giao trong 30 – 45 phút nữa.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <a href="index.html" class="btn-primary" style="margin-right: 15px;"><i class="fas fa-home"></i> Về
+                    Trang Chủ</a>
+                <a href="menu.html" class="btn-outline"><i class="fas fa-utensils"></i> Tiếp tục mua sắm</a>
+            </div>
+        </div>
+    </section>
+
+    <!--=====FOOTER=====-->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="logo-text"><span class="logo-crunchy">CRUNCHY</span><br /><span
+                            class="logo-fury">FURY</span></span>
+                </div>
+                <p>Giòn đến tận cùng – Mãn nhãn từng khoảnh khắc</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><img src="/ungdung/fb.png" alt="Facebook"></a>
+                    <a href="#" class="social-link"><img src="/ungdung/itg.png" alt="Instagram"></a>
+                    <a href="#" class="social-link"><img src="/ungdung/tiktok.png" alt="TikTok"></a>
+                    <a href="#" class="social-link"><img src="/ungdung/ytb.png" alt="YouTube"></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Liên kết nhanh</h4>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="khuyen-mai.html">Khuyến mãi</a></li>
+                    <li><a href="#about">Giới thiệu</a></li>
+                    <li><a href="lien-he.html">Liên hệ</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-support">
+                <h4>Hỗ trợ</h4>
+                <ul>
+                    <li><a href="#">Chính sách giao hàng</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                </ul>
+            </div>
+            <div class="footer-app">
+                <h4>Tải ứng dụng:</h4>
+                <div class="app-badges">
+                    <a href="#"><img src="/ungdung/apsote.png" alt="App Store"></a>
+                    <a href="#"><img src="/ungdung/ch.png" alt="Google Play"></a>
+                </div>
+                <div class="qr-placeholder">
+                    <div class="qr-box"><img src="/ungdung/qr.png" alt="QR Code"></div>
+                    <span>Quét để tải app</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 CRUNCHY FURY. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Xóa giỏ hàng
+            localStorage.removeItem('cf_cart');
+            const cartBadge = document.getElementById('cart-count');
+            if (cartBadge) cartBadge.innerText = '0';
+
+            // Mã đơn ngẫu nhiên
+            const randomID = Math.floor(1000 + Math.random() * 9000);
+            document.getElementById('order-id').innerText = 'CF2026-' + randomID;
+
+            // Giờ hiện tại
+            const now = new Date();
+            const timeStr = now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0');
+            document.getElementById('time-now').innerText = timeStr;
+
+            // Pháo giấy confetti
+            if (typeof confetti === 'function') {
+                confetti({
+                    particleCount: 150,
+                    spread: 80,
+                    origin: { y: 0.6 },
+                    colors: ['#FF6B00', '#ffffff', '#4ade80']
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

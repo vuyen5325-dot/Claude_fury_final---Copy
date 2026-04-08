@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crunchy Fury – Gà Rán Giòn Tan</title>
+  <link rel="icon" type="image/png" href="thucdon/avt.png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow:wght@400;500;600&family=Bebas+Neue&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <!-- Thay đường dẫn src bên dưới thành ảnh logo của bạn -->
+        <img src="thucdon/avt.png" alt="Crunchy Fury Logo" style="height: 65px; width: auto;" />
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link active" data-page="home">Trang chủ</a>
+        <a href="menu.html" class="nav-link" data-page="menu">Menu</a>
+        <a href="khuyen-mai.html" class="nav-link" data-page="khuyen-mai">Khuyến mãi</a>
+        <a href="#about" class="nav-link">Giới thiệu</a>
+        <a href="lien-he.html" class="nav-link" data-page="lien-he">Liên hệ</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" title="Tìm kiếm" id="search-toggle"><i class="fas fa-search"></i></button>
+        <button class="icon-btn" title="Yêu thích"><i class="fas fa-heart"></i></button>
+        <button class="icon-btn" title="Tài khoản"><i class="fas fa-user"></i></button>
+        <a href="gio-hang.html" class="icon-btn cart-btn" title="Giỏ hàng">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-badge" id="cart-count">0</span>
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+    <div class="search-bar" id="search-bar">
+      <input type="text" placeholder="Tìm món ăn..." class="search-input" />
+      <button class="search-submit"><i class="fas fa-search"></i></button>
+    </div>
+  </header>
+
+  <!-- MENU PAGE HERO -->
+  <div class="page-hero menu-hero">
+    <div class="fire-left"></div>
+    <div class="fire-right"></div>
+    <h1>THỰC ĐƠN</h1>
+    <p>Khám phá tất cả món ăn cực giòn, cực ngon của Crunchy Fury</p>
+  </div>
+
+  <!-- MENU BODY -->
+  <section class="menu-section">
+    <div class="menu-layout">
+
+      <!-- FILTER SIDEBAR -->
+      <aside class="filter-sidebar">
+        <h3 class="filter-title">BỘ LỌC</h3>
+
+        <div class="filter-group">
+          <h4>Danh mục</h4>
+          <label class="filter-check"><input type="checkbox" value="ga-ran" checked onchange="filterMenu()"> Gà rán
+            nguyên miếng <span class="count">(12)</span></label>
+          <label class="filter-check"><input type="checkbox" value="nuggets" checked onchange="filterMenu()"> Gà viên /
+            Nuggets <span class="count">(6)</span></label>
+          <label class="filter-check"><input type="checkbox" value="ga-cay" checked onchange="filterMenu()"> Gà cay
+            <span class="count">(8)</span></label>
+          <label class="filter-check"><input type="checkbox" value="combo" checked onchange="filterMenu()"> Combo gia
+            đình <span class="count">(4)</span></label>
+          <label class="filter-check"><input type="checkbox" value="combo-ca-nhan" checked onchange="filterMenu()">
+            Combo cá nhân <span class="count">(5)</span></label>
+          <label class="filter-check"><input type="checkbox" value="thuc-uong" checked onchange="filterMenu()"> Thức
+            uống <span class="count">(7)</span></label>
+          <label class="filter-check"><input type="checkbox" value="phu-kien" checked onchange="filterMenu()"> Phụ kiện
+            / Sốt <span class="count">(5)</span></label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Mức giá</h4>
+          <div class="price-range-wrap">
+            <input type="range" min="0" max="500000" step="10000" value="500000" class="price-slider" id="price-slider"
+              oninput="updatePriceLabel(this.value); filterMenu()" />
+            <div class="price-labels"><span>0đ</span><span id="price-max-label">500.000đ</span></div>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h4>Cấp độ cay</h4>
+          <label class="filter-check"><input type="checkbox" value="khong-cay" checked onchange="filterMenu()"> Không
+            cay 🌿</label>
+          <label class="filter-check"><input type="checkbox" value="cay-nhe" checked onchange="filterMenu()"> Cay nhẹ
+            🌶️</label>
+          <label class="filter-check"><input type="checkbox" value="cay-thieu-dot" checked onchange="filterMenu()"> Cay
+            thiêu đốt 🔥🔥🔥</label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Đánh giá</h4>
+          <label class="filter-check"><input type="checkbox" value="3" checked onchange="filterMenu()"> Từ 3 sao trở lên
+            ★★★</label>
+          <label class="filter-check"><input type="checkbox" value="4" checked onchange="filterMenu()"> Từ 4 sao trở lên
+            ★★★★</label>
+        </div>
+
+        <div class="filter-buttons">
+          <button class="btn-primary w-full" onclick="filterMenu()">Lọc</button>
+          <button class="btn-outline w-full" onclick="resetFilter()">Đặt lại</button>
+        </div>
+      </aside>
+
+      <!-- PRODUCT GRID -->
+      <div class="menu-main">
+        <div class="menu-toolbar">
+          <p class="result-count" id="result-count">Hiển thị 1–12 trên 47 sản phẩm</p>
+          <div class="sort-wrap">
+            <select class="sort-select" onchange="filterMenu()">
+              <option value="default">Sắp xếp theo</option>
+              <option value="newest">Mới nhất</option>
+              <option value="popular">Bán chạy nhất</option>
+              <option value="price-asc">Giá thấp đến cao</option>
+              <option value="price-desc">Giá cao đến thấp</option>
+            </select>
+          </div>
+        </div>
+        <div class="products-grid menu-grid" id="menu-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-text"><span class="logo-crunchy">CRUNCHY</span><br /><span
+              class="logo-fury">FURY</span></span>
+        </div>
+        <p>Giòn đến tận cùng – Mãn nhãn từng khoảnh khắc</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><img src="/ungdung/fb.png" alt="Facebook"></a>
+          <a href="#" class="social-link"><img src="/ungdung/itg.png" alt="Instagram"></a>
+          <a href="#" class="social-link"><img src="/ungdung/tiktok.png" alt="TikTok"></a>
+          <a href="#" class="social-link"><img src="/ungdung/ytb.png" alt="YouTube"></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Liên kết nhanh</h4>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="khuyen-mai.html">Khuyến mãi</a></li>
+          <li><a href="#about">Giới thiệu</a></li>
+          <li><a href="lien-he.html">Liên hệ</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-support">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="#">Chính sách giao hàng</a></li>
+          <li><a href="#">Chính sách đổi trả</a></li>
+          <li><a href="#">Điều khoản sử dụng</a></li>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+        </ul>
+      </div>
+      <div class="footer-app">
+        <h4>Tải ứng dụng:</h4>
+        <div class="app-badges">
+          <a href="#"><img src="/ungdung/apsote.png" alt="App Store"></a>
+          <a href="#"><img src="/ungdung/ch.png" alt="Google Play"></a>
+        </div>
+        <div class="qr-placeholder">
+          <div class="qr-box"><img src="/ungdung/qr.png" alt="QR Code"></div>
+          <span>Quét để tải app</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 CRUNCHY FURY. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== COMBO MODAL ===== -->
+  <div class="modal-overlay" id="combo-modal">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

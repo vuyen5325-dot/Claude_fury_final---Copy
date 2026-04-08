@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crunchy Fury – Gà Rán Giòn Tan</title>
+  <link rel="icon" type="image/png" href="thucdon/avt.png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow:wght@400;500;600&family=Bebas+Neue&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <!-- Thay đường dẫn src bên dưới thành ảnh logo của bạn -->
+        <img src="thucdon/avt.png" alt="Crunchy Fury Logo" style="height: 65px; width: auto;" />
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link active" data-page="home">Trang chủ</a>
+        <a href="menu.html" class="nav-link" data-page="menu">Menu</a>
+        <a href="khuyen-mai.html" class="nav-link" data-page="khuyen-mai">Khuyến mãi</a>
+        <a href="#about" class="nav-link">Giới thiệu</a>
+        <a href="lien-he.html" class="nav-link" data-page="lien-he">Liên hệ</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" title="Tìm kiếm" id="search-toggle"><i class="fas fa-search"></i></button>
+        <button class="icon-btn" title="Yêu thích"><i class="fas fa-heart"></i></button>
+        <button class="icon-btn" title="Tài khoản"><i class="fas fa-user"></i></button>
+        <a href="gio-hang.html" class="icon-btn cart-btn" title="Giỏ hàng">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-badge" id="cart-count">0</span>
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+    <div class="search-bar" id="search-bar">
+      <input type="text" placeholder="Tìm món ăn..." class="search-input" />
+      <button class="search-submit"><i class="fas fa-search"></i></button>
+    </div>
+  </header>
+  <div class="page-hero promo-hero">
+    <div class="fire-left"></div>
+    <div class="fire-right"></div>
+    <h1>KHUYẾN MÃI</h1>
+    <p>Ưu đãi cực khủng – Giá siêu hời mỗi ngày!</p>
+  </div>
+
+  <section class="promo-page-section">
+    <!-- COUNTDOWN BANNER -->
+    <div class="promo-full-banner">
+      <div class="promo-banner-content">
+        <h2 class="promo-banner-title">GIỜ VÀNG 18H-20H – MUA 1 TẶNG 1</h2>
+        <div class="countdown-wrapper">
+          <div class="countdown" id="countdown">
+            <div class="time-block"><span id="hours">02</span><label>GIỜ</label></div>
+            <span class="colon">:</span>
+            <div class="time-block"><span id="minutes">15</span><label>PHÚT</label></div>
+            <span class="colon">:</span>
+            <div class="time-block"><span id="seconds">33</span><label>GIÂY</label></div>
+          </div>
+          <div class="coupon-block">
+            <span class="coupon-code" id="coupon-code">FURY20</span>
+            <button class="copy-btn" onclick="copyCoupon()"><i class="fas fa-copy"></i> SAO CHÉP</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROMO DEALS GRID -->
+    <div class="container">
+      <h2 class="section-title" style="margin: 3rem 0 1.5rem;">🔥 ƯU ĐÃI ĐANG DIỄN RA</h2>
+      <div class="promo-deals-grid">
+        <div class="promo-deal-card hot">
+          <div class="deal-badge">HOT</div>
+          <div class="deal-emoji">🍗🍗</div>
+          <h3>Mua 2 Đùi Tặng 1 Cánh</h3>
+          <p>Áp dụng tất cả các ngày trong tuần. Không giới hạn số lần dùng.</p>
+          <div class="deal-code">Mã: <strong>FURY2TANG1</strong></div>
+          <button class="btn-primary" onclick="copyCode('FURY2TANG1')">Sao chép mã</button>
+        </div>
+        <div class="promo-deal-card new">
+          <div class="deal-badge new-badge">MỚI</div>
+          <div class="deal-emoji">🍗🔥</div>
+          <h3>Combo Fury Bucket – Giảm 50K</h3>
+          <p>Combo bucket gồm 8 miếng gà + khoai tây + nước. Giảm 50K khi đặt online.</p>
+          <div class="deal-code">Mã: <strong>BUCKET50</strong></div>
+          <button class="btn-primary" onclick="copyCode('BUCKET50')">Sao chép mã</button>
+        </div>
+        <div class="promo-deal-card">
+          <div class="deal-badge" style="background:#555;">THƯỜNG XUYÊN</div>
+          <div class="deal-emoji">⭐</div>
+          <h3>Thành Viên Mới Giảm 20%</h3>
+          <p>Đăng ký tài khoản lần đầu và nhận ngay voucher giảm 20% cho đơn hàng đầu tiên.</p>
+          <div class="deal-code">Mã: <strong>FURY20</strong></div>
+          <button class="btn-primary" onclick="copyCode('FURY20')">Sao chép mã</button>
+        </div>
+        <div class="promo-deal-card">
+          <div class="deal-emoji">🎂</div>
+          <h3>Sinh Nhật – Miễn Phí 1 Phần</h3>
+          <p>Nhân dịp sinh nhật của bạn, Crunchy Fury tặng 1 phần gà rán miễn phí!</p>
+          <div class="deal-code">Tự động áp dụng khi sinh nhật</div>
+          <button class="btn-outline">Cập nhật ngày sinh</button>
+        </div>
+        <div class="promo-deal-card">
+          <div class="deal-emoji">📱</div>
+          <h3>Đặt Qua App Giảm 15K</h3>
+          <p>Tải app Crunchy Fury và đặt hàng lần đầu qua app nhận ngay giảm 15.000đ.</p>
+          <div class="deal-code">Mã: <strong>APP15K</strong></div>
+          <button class="btn-primary" onclick="copyCode('APP15K')">Sao chép mã</button>
+        </div>
+        <div class="promo-deal-card">
+          <div class="deal-emoji">🤝</div>
+          <h3>Giới Thiệu Bạn Bè – Nhận 30K</h3>
+          <p>Giới thiệu bạn bè đặt hàng, cả hai cùng nhận voucher 30K cho đơn tiếp theo.</p>
+          <div class="deal-code">Dùng link giới thiệu cá nhân</div>
+          <button class="btn-outline">Lấy link giới thiệu</button>
+        </div>
+      </div>
+
+      <!-- COMBO SECTION ON PROMO PAGE -->
+      <h2 class="section-title" style="margin: 3rem 0 1.5rem;">🍗 COMBO GÀ RÁN – CÀNG MUA CÀNG ĐÃ 🔥</h2>
+      <div class="combo-grid" id="promo-combo-grid"><!-- JS --></div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-text"><span class="logo-crunchy">CRUNCHY</span><br /><span
+              class="logo-fury">FURY</span></span>
+        </div>
+        <p>Giòn đến tận cùng – Mãn nhãn từng khoảnh khắc</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><img src="/ungdung/fb.png" alt="Facebook"></a>
+          <a href="#" class="social-link"><img src="/ungdung/itg.png" alt="Instagram"></a>
+          <a href="#" class="social-link"><img src="/ungdung/tiktok.png" alt="TikTok"></a>
+          <a href="#" class="social-link"><img src="/ungdung/ytb.png" alt="YouTube"></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Liên kết nhanh</h4>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="khuyen-mai.html">Khuyến mãi</a></li>
+          <li><a href="#about">Giới thiệu</a></li>
+          <li><a href="lien-he.html">Liên hệ</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-support">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="#">Chính sách giao hàng</a></li>
+          <li><a href="#">Chính sách đổi trả</a></li>
+          <li><a href="#">Điều khoản sử dụng</a></li>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+        </ul>
+      </div>
+      <div class="footer-app">
+        <h4>Tải ứng dụng:</h4>
+        <div class="app-badges">
+          <a href="#"><img src="/ungdung/apsote.png" alt="App Store"></a>
+          <a href="#"><img src="/ungdung/ch.png" alt="Google Play"></a>
+        </div>
+        <div class="qr-placeholder">
+          <div class="qr-box"><img src="/ungdung/qr.png" alt="QR Code"></div>
+          <span>Quét để tải app</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 CRUNCHY FURY. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== COMBO MODAL ===== -->
+  <div class="modal-overlay" id="combo-modal">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

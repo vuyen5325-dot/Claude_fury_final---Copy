@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crunchy Fury – Gà Rán Giòn Tan</title>
+  <link rel="icon" type="image/png" href="thucdon/avt.png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow:wght@400;500;600&family=Bebas+Neue&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <!-- Thay đường dẫn src bên dưới thành ảnh logo của bạn -->
+        <img src="thucdon/avt.png" alt="Crunchy Fury Logo" style="height: 65px; width: auto;" />
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link" data-page="home">Trang chủ</a>
+        <a href="menu.html" class="nav-link" data-page="menu">Menu</a>
+        <a href="khuyen-mai.html" class="nav-link" data-page="khuyen-mai">Khuyến mãi</a>
+        <a href="#about" class="nav-link">Giới thiệu</a>
+        <a href="lien-he.html" class="nav-link" data-page="lien-he">Liên hệ</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" title="Tìm kiếm" id="search-toggle"><i class="fas fa-search"></i></button>
+        <button class="icon-btn" title="Yêu thích"><i class="fas fa-heart"></i></button>
+        <button class="icon-btn" title="Tài khoản"><i class="fas fa-user"></i></button>
+        <a href="gio-hang.html" class="icon-btn cart-btn" title="Giỏ hàng">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-badge" id="cart-count">0</span>
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+    <div class="search-bar" id="search-bar">
+      <input type="text" placeholder="Tìm món ăn..." class="search-input" />
+      <button class="search-submit"><i class="fas fa-search"></i></button>
+    </div>
+  </header>
+
+  <!-- ===== HERO SLIDER ===== -->
+  <section class="hero-slider" id="home">
+    <div class="slides-track" id="slides-track">
+      <!-- Slide 1 -->
+      <div class="slide slide-1" style="padding: 0; display: block;">
+        <a href="menu.html" style="display: block; width: 100%; height: 100%;">
+          <!-- Thay đường dẫn src="images/..." thành ảnh banner thứ 1 của bạn -->
+          <img src="banner/banner2.png" alt="Banner 1" style="width: 100%; height: 100%; object-fit: cover;" />
+        </a>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide slide-2" style="padding: 0; display: block;">
+        <a href="khuyen-mai.html" style="display: block; width: 100%; height: 100%;">
+          <!-- Thay đường dẫn src="images/..." thành ảnh banner thứ 2 của bạn -->
+          <img src="banner/banner3.png" alt="Banner 2" style="width: 100%; height: 100%; object-fit: cover;" />
+        </a>
+      </div>
+
+
+    </div>
+
+    <button class="slider-btn slider-prev" id="slider-prev"><i class="fas fa-chevron-left"></i></button>
+    <button class="slider-btn slider-next" id="slider-next"><i class="fas fa-chevron-right"></i></button>
+    <div class="slider-dots" id="slider-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT NEW ===== -->
+  <section class="about-section" id="about">
+    <div class="container">
+
+      <!-- TIÊU ĐỀ -->
+      <h2 class="about-title">
+        CRUNCHY FURY <br>
+        <span>Cơn Thịnh Nộ Của Vị Giác</span>
+      </h2>
+
+      <!-- MÔ TẢ -->
+      <p class="about-desc">
+        Crunchy Fury ra đời với mong muốn mang đến trải nghiệm gà rán hoàn hảo nhất.
+        Từng miếng gà được chế biến từ nguyên liệu tươi mỗi ngày, kết hợp công nghệ chiên hiện đại
+        giúp lớp vỏ giòn tan và phần thịt bên trong mềm mọng. Không chỉ là món ăn,
+        đó là sự bùng nổ hương vị trong từng khoảnh khắc.
+      </p>
+
+      <!-- 3 GIÁ TRỊ -->
+      <div class="about-features">
+
+        <div class="feature-item">
+          <img src="images/gatuoi1.jpg" alt="">
+          <h3>Gà tươi</h3>
+          <p>Nguyên liệu tươi 100% mỗi ngày, đảm bảo chất lượng tốt nhất.</p>
+        </div>
+
+        <div class="feature-item">
+          <img src="images/chicken2.jpg" alt="">
+          <h3>Giòn rụm</h3>
+          <p>Lớp vỏ vàng giòn với công nghệ chiên áp suất kép hiện đại độc quyền.</p>
+        </div>
+
+        <div class="feature-item">
+          <img src="images/shiphang.jpg" alt="">
+          <h3>Giao hàng nhanh</h3>
+          <p>Phục vụ nhanh chóng, giao đến tay bạn khi còn nóng hổi.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== PROMO BANNER ===== -->
+  <section class="promo-banner">
+    <div class="promo-banner-bg">
+      <div class="promo-banner-content">
+        <h2 class="promo-banner-title">GIỜ VÀNG 18H-20H – MUA 1 TẶNG 1</h2>
+        <div class="countdown-wrapper">
+          <div class="countdown" id="countdown">
+            <div class="time-block"><span id="hours">02</span><label>GIỜ</label></div>
+            <span class="colon">:</span>
+            <div class="time-block"><span id="minutes">15</span><label>PHÚT</label></div>
+            <span class="colon">:</span>
+            <div class="time-block"><span id="seconds">33</span><label>GIÂY</label></div>
+          </div>
+          <div class="coupon-block">
+            <span class="coupon-code" id="coupon-code">FURY20</span>
+            <button class="copy-btn" onclick="copyCoupon()"><i class="fas fa-copy"></i> SAO CHÉP</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED PRODUCTS ===== -->
+  <section class="featured-section">
+    <div class="section-header">
+      <h2 class="section-title">🔥 MÓN NGON NỔI BẬT 🔥</h2>
+    </div>
+    <div class="products-grid" id="featured-grid">
+      <!-- Populated by JS -->
+    </div>
+  </section>
+
+  <!-- ===== COMBO SECTION ===== -->
+  <section class="combo-section">
+    <div class="section-header">
+      <h2 class="section-title">🍗 COMBO GÀ RÁN – CÀNG MUA CÀNG ĐÃ 🔥</h2>
+    </div>
+    <div class="combo-grid" id="combo-grid">
+      <!-- Populated by JS -->
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials-section">
+    <div class="section-header">
+      <h2 class="section-title">KHÁCH HÀNG NÓI GÌ VỀ CRUNCHY FURY</h2>
+    </div>
+    <div class="testimonials-track" id="testimonials-track">
+      <div class="testimonial-card" id="testimonials-track">
+        <div class="testi-avatar"><img src="avatar/sontung.png" alt="SơnTung MTP" /></div>
+        <div class="testi-name">SơnTung MTP</div>
+        <div class="stars">★★★★★</div>
+        <div class="testi-food-img"><img src="monan/gacay.png" alt="Món ăn"></div>
+        <p> Quá ngon</p>
+        <span class="testi-time">3 ngày trước</span>
+      </div>
+      <div class="testimonial-card" id="testimonials-track">
+        <div class="testi-avatar"><img src="avatar/lêlam.png" alt="Lê Dương Bảo Lâm" /></div>
+        <div class="testi-name">Lê Dương Bảo Lâm</div>
+        <div class="stars">★★★★★</div>
+        <div class="testi-food-img"><img src="monan/xotcam.png" alt="Món ăn"></div>
+        <p> Gà rán ngon ăn cùng sốt cam ngon hết sảy rất an tâm khi mua cho các bé nhà mình ăn</p>
+        <span class="testi-time"> 5 ngày trước</span>
+      </div>
+
+
+      <div class="testimonial-card" id="testimonials-track">
+        <div class="testi-avatar"><img src="/avatar/tuantu.png" alt="Tuấn Tú" /></div>
+        <div class="testi-name">Tuấn Tú</div>
+        <div class="stars">★★★★</div>
+        <div class="testi-food-img"><img src="/monan/gakhoai.png" alt="Món ăn"></div>
+        <p> Gà ăn tạm được nhưng khoai tây hơi ỉu </p>
+        <span class="testi-time">2 tuần trước</span>
+      </div>
+
+      <div class="testimonial-card" id="testimonials-track">
+        <div class="testi-avatar"><img src="/avatar/uyen.png" alt="Phương Uyên" /></div>
+        <div class="testi-name">Phương Uyên</div>
+        <div class="stars">★★★★★</div>
+        <div class="testi-food-img"><img src="/monan/gathieu.png" alt="Món ăn"></div>
+        <p> nói chung ăn cũng tạm được không quá suất sắc hơi cháy quá</p>
+        <span class="testi-time">3 ngày trước</span>
+      </div>
+
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <button class="btn-outline">Xem tất cả đánh giá</button>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-text"><span class="logo-crunchy">CRUNCHY</span><br /><span
+              class="logo-fury">FURY</span></span>
+        </div>
+        <p>Giòn đến tận cùng – Mãn nhãn từng khoảnh khắc</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><img src="/ungdung/fb.png" alt="Facebook"></a>
+          <a href="#" class="social-link"><img src="/ungdung/itg.png" alt="Instagram"></a>
+          <a href="#" class="social-link"><img src="/ungdung/tiktok.png" alt="TikTok"></a>
+          <a href="#" class="social-link"><img src="/ungdung/ytb.png" alt="YouTube"></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Liên kết nhanh</h4>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="khuyen-mai.html">Khuyến mãi</a></li>
+          <li><a href="#about">Giới thiệu</a></li>
+          <li><a href="lien-he.html">Liên hệ</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-support">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="#">Chính sách giao hàng</a></li>
+          <li><a href="#">Chính sách đổi trả</a></li>
+          <li><a href="#">Điều khoản sử dụng</a></li>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+        </ul>
+      </div>
+      <div class="footer-app">
+        <h4>Tải ứng dụng:</h4>
+        <div class="app-badges">
+          <a href="#"><img src="/ungdung/apsote.png" alt="App Store"></a>
+          <a href="#"><img src="/ungdung/ch.png" alt="Google Play"></a>
+        </div>
+        <div class="qr-placeholder">
+          <div class="qr-box"><img src="/ungdung/qr.png" alt="QR Code"></div>
+          <span>Quét để tải app</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 CRUNCHY FURY. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== COMBO MODAL ===== -->
+  <div class="modal-overlay" id="combo-modal">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
